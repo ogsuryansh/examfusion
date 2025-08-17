@@ -8,9 +8,25 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+          ui: ['framer-motion', 'lucide-react']
+        }
+      }
+    },
+    sourcemap: false,
+    minify: 'terser',
+    target: 'es2015'
   },
   server: {
     port: 5173,
+    open: true
+  },
+  preview: {
+    port: 4173,
     open: true
   }
 })
