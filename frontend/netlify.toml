@@ -35,6 +35,11 @@
   [headers.values]
     Content-Type = "font/woff2"
 
+[[headers]]
+  for = "/*.jsx"
+  [headers.values]
+    Content-Type = "application/javascript"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
