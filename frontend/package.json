@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "clean": "node clean-build.js",
+    "clean-build": "npm run clean && npm install && npm run build"
   },
   "dependencies": {
     "react": "18.2.0",
