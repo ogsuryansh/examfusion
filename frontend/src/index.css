@@ -1,0 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-900;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-700 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md;
+  }
+  
+  .btn-secondary {
+    @apply bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-primary-600 dark:text-primary-400 font-semibold py-2 px-4 rounded-lg border-2 border-primary-600 dark:border-primary-400 transition-all duration-300 shadow-sm hover:shadow-md;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700;
+  }
+  
+  .section-padding {
+    @apply py-16 px-4 sm:px-6 lg:px-8;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .text-primary {
+    @apply text-primary-600 dark:text-primary-400;
+  }
+
+  .text-secondary {
+    @apply text-gray-600 dark:text-gray-300;
+  }
+
+  .text-muted {
+    @apply text-gray-500 dark:text-gray-400;
+  }
+
+  .bg-card {
+    @apply bg-white dark:bg-gray-800;
+  }
+
+  .bg-section {
+    @apply bg-gray-50 dark:bg-gray-900;
+  }
+
+  .border-card {
+    @apply border-gray-200 dark:border-gray-700;
+  }
+
+  /* Form Input Styles */
+  .input-field {
+    @apply w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 shadow-sm;
+  }
+
+  .input-field:focus {
+    @apply shadow-md;
+  }
+
+  .input-field.error {
+    @apply border-red-500 focus:ring-red-500 focus:border-red-500;
+  }
+
+  .input-field.success {
+    @apply border-green-500 focus:ring-green-500 focus:border-green-500;
+  }
+
+  /* Form Container */
+  .form-container {
+    @apply bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 p-8;
+  }
+
+  /* Form Group */
+  .form-group {
+    @apply space-y-2;
+  }
+
+  /* Form Label */
+  .form-label {
+    @apply block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2;
+  }
+
+  /* Form Error */
+  .form-error {
+    @apply flex items-center mt-2 text-red-600 dark:text-red-400 text-sm;
+  }
+
+  /* Form Success */
+  .form-success {
+    @apply flex items-center mt-2 text-green-600 dark:text-green-400 text-sm;
+  }
+
+  /* Checkbox Styles */
+  .form-checkbox {
+    @apply h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800;
+  }
+
+  /* Social Button */
+  .social-btn {
+    @apply w-full flex items-center justify-center px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-300 font-medium;
+  }
+
+  /* Divider */
+  .form-divider {
+    @apply relative my-8;
+  }
+
+  .form-divider .line {
+    @apply absolute inset-0 flex items-center;
+  }
+
+  .form-divider .line::before {
+    @apply w-full border-t border-gray-300 dark:border-gray-600;
+    content: '';
+  }
+
+  .form-divider .text {
+    @apply relative flex justify-center text-sm px-2 bg-white dark:bg-gray-800 text-gray-500 dark:text-gray-400;
+  }
+
+  /* Password Strength Indicator */
+  .password-strength {
+    @apply mt-2;
+  }
+
+  .strength-bar {
+    @apply h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden;
+  }
+
+  .strength-fill {
+    @apply h-full transition-all duration-300;
+  }
+
+  .strength-text {
+    @apply text-xs mt-1;
+  }
+
+  /* Loading Spinner */
+  .loading-spinner {
+    @apply animate-spin rounded-full h-5 w-5 border-b-2 border-white;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-fallback {
+    @apply text-primary-600 dark:text-primary-400;
+  }
+  
+  .bg-gradient-primary {
+    @apply bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800;
+  }
+
+  .text-accessible {
+    @apply text-gray-900 dark:text-white;
+  }
+
+  .text-accessible-secondary {
+    @apply text-gray-700 dark:text-gray-200;
+  }
+
+  .text-accessible-muted {
+    @apply text-gray-600 dark:text-gray-300;
+  }
+}
